@@ -10,7 +10,7 @@ const Ticket = require('./models/ticketModel'); // Your Ticket model
 app.use(express.json()); // To parse JSON bodies
 app.use(cors());
 
-mongoose.connect('mongodb+srv://pags:Jvi45GLvQaIERdZ0@cluster0.gebpz.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://pags:Jvi45GLvQaIERdZ0@cluster0.gebpz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
