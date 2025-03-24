@@ -8,7 +8,13 @@ const User = require('./models/userModel');
 const Ticket = require('./models/ticketModel'); // Your Ticket model
 
 app.use(express.json()); // To parse JSON bodies
-app.use(cors());
+app.use(cors( 
+  {
+    origin: ["https://deploy-mera-1whq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+  ));
 
 mongoose.connect('mongodb+srv://pags:Jvi45GLvQaIERdZ0@cluster0.gebpz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
